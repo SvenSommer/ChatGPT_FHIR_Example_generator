@@ -37,7 +37,7 @@ def generate_prompt(prompt, max_retries=2, manual_mode=False):
                 response = openai.Completion.create(
                 engine="text-davinci-002",
                 prompt=prompt,
-                max_tokens=100,
+                max_tokens=300,
                 temperature=0.5,
                 n=1,
                 top_p=1.0,
@@ -90,4 +90,4 @@ def read_fsh_files(input_path, output_path, manual_mode):
                         out_f.write(result)
 
 # Replace './input' and './output' with your directories
-read_fsh_files('./input/CareCommunicationFShInstances', './output/CareCommunicationFShInstances', True)
+read_fsh_files('./input/CareCommunicationFShInstances', './output/CareCommunicationFShInstances', False)
